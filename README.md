@@ -9,10 +9,7 @@ title: Home
 
 ## About Me
 
-Hello! I'm **[Your Name]**, a [Your Profession] passionate about [few interests or professional focus areas].
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-Feel free to explore the sections below to learn more about my background and skills.
+Hello! I'm Liang Telkamp.
 
 - [CV](#cv)
 - [Experience](#experience)
@@ -25,12 +22,11 @@ You can download my full CV [here](assets/my-cv.pdf).
 Or view the highlights below:
 
 **Education**
-- B.Sc. in [Field], [University Name], [Year]
-- M.Sc. in [Field], [University Name], [Year]
+- B.Sc. in Artificial Intelligence, University of Amsterdam, 2020-2023
+- M.Sc. in Artificial Intelligence, University of Amsterdam, 2023-2025
 
 **Skills**
-- Programming: Python, JavaScript, [Others]
-- Tools: Git, Docker, [Others]
+- Programming: Python
 
 ---
 
@@ -55,5 +51,3 @@ Or view the highlights below:
 - LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
 
 ---
-
-*This site is built using GitHub Pages and Jekyll.*
