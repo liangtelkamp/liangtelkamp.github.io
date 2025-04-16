@@ -24,7 +24,7 @@ export default function CVPage() {
             </div>
             <div>
               <h3 className="font-semibold">Phone</h3>
-              <p>06 4856 71 66</p>
+              <p>XX</p>
             </div>
             <div>
               <h3 className="font-semibold">Address</h3>
