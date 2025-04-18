@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'DM Sans';
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -35,9 +35,10 @@ header nav ul li a {
 }
 
 section {
-    padding: 20px;
+    padding: 80px 20px; /* Increased padding for sections */
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 40px; /* Added bottom margin to avoid overlap */
 }
 
 section h2 {
@@ -64,4 +65,10 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+.intro-image {
+    float: left;
+    width: 50%;
+    /* border-radius: 50%; */
 }
