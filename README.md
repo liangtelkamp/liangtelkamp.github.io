@@ -49,19 +49,28 @@ liangtelkamp.github.io/
 └── package.json
 ```
 
-## 🛠️ Development
+## 💻 Development
 
-1. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+**Requirements:**
+- Node.js 20.9.0 or higher (required for Next.js 16)
+- npm (comes with Node.js)
 
-2. **Run development server**:
-   ```bash
-   npm run dev
-   ```
+**Commands:**
 
-3. **Open** [http://localhost:3000](http://localhost:3000) in your browser
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# The static files will be in out/ directory
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the site.
 
 ## 🖼️ Adding Your Profile Picture
 
