@@ -1,31 +1,19 @@
 # Deployment Guide for GitHub Pages
 
-## Quick Deploy
+## 🚀 Deployment Guide
+You are already set up for **Automated Deployment with GitHub Actions**.
 
-1. **Build the static site:**
-   ```bash
-   npm run build
-   ```
+### ⚠️ IMPORTANT STEP: Configure GitHub Settings
+1. Go to your repository on GitHub: **[liangtelkamp/liangtelkamp.github.io](https://github.com/liangtelkamp/liangtelkamp.github.io)**
+2. Click on the **Settings** tab (gear icon).
+3. Click on **Pages** in the left sidebar.
+4. Under **Build and deployment** section:
+   - **Source**: Change from "Deploy from a branch" to **"GitHub Actions"**.
+5. That's it! GitHub will now use the workflow defined in `.github/workflows/deploy.yml` to build and deploy your site.
 
-2. **Add .nojekyll file** (prevents GitHub Pages from using Jekyll):
-   ```bash
-   touch out/.nojekyll
-   ```
+---
 
-3. **Commit everything:**
-   ```bash
-   git add .
-   git commit -m "Convert to Next.js with organic green theme"
-   git push origin main
-   ```
-
-4. **Configure GitHub Pages:**
-   - Go to your repository on GitHub
-   - Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `main`
-   - Folder: `/out`
-   - Save
+### Manual Trigger (if needed)
 
 ## Automated Deployment with GitHub Actions
 
