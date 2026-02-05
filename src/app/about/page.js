@@ -57,10 +57,9 @@ export default function About() {
                 specializing in Natural Language Processing and Machine Learning solutions.
               </p>
               <p>
-                My journey in AI began at the University of Amsterdam, where I completed dual master's degrees 
-                in <strong className="text-primary-700">Artificial Intelligence</strong> and{' '}
-                <strong className="text-primary-700">Logic</strong>. I have a deep interest in{' '}
-                <strong className="text-primary-700">Logic and AI</strong>, exploring how formal reasoning 
+                My journey in AI began at the University of Amsterdam, where I completed master's degree 
+                in <strong className="text-primary-700">Artificial Intelligence</strong>. I have a deep interest in{' '}
+                <strong className="text-primary-700">Logic, NLP and AI</strong>, exploring how formal reasoning 
                 can enhance machine learning systems. This unique combination gives me a 
                 distinctive perspective on AI—blending practical application with rigorous 
                 theoretical foundations.
@@ -94,9 +93,9 @@ export default function About() {
             {[
               {
                 institution: 'University of Amsterdam',
-                degree: 'MSc Artificial Intelligence & MSc Logic',
+                degree: 'MSc Artificial Intelligence',
                 period: '2023 - 2025',
-                description: 'Dual master\'s degrees with specialization in Natural Language Processing and Machine Translation. Engaged in cutting-edge research while maintaining academic excellence.',
+                description: 'Master\'s degree with specialization in Logic, Natural Language Processing and Sensitive Data. Engaged in cutting-edge research while maintaining academic excellence.',
                 highlights: ['Machine Learning', 'NLP', 'Formal Logic', 'Research Methods']
               },
               {
