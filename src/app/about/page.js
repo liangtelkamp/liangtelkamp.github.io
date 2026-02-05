@@ -30,10 +30,10 @@ export default function About() {
         
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="font-outfit font-bold text-5xl md:text-6xl mb-6 animate-fade-in">
-            About <span className="bg-gradient-organic bg-clip-text text-transparent">Me</span>
+            About <span className="bg-gradient-organic bg-clip-text text-green-600">Me</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-700 font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            AI Consultant • Researcher • Innovator
+            AI Consultant @ NextHuman | Software Engineer Intern @ UN OCHA
           </p>
           <p className="text-lg text-neutral-600 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
             Passionate about leveraging AI to create sustainable, impactful solutions for tomorrow's challenges
@@ -45,21 +45,31 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white rounded-2xl p-8 md:p-12 border border-neutral-200 shadow-lg green-border-accent hover:shadow-xl hover:shadow-primary-100/30 transition-all duration-300 animate-on-scroll">
-            <h2 className="font-outfit font-bold text-3xl mb-6 bg-gradient-organic bg-clip-text text-transparent">
+            <h2 className="font-outfit font-bold text-3xl mb-6 bg-gradient-organic bg-clip-text text-green-600">
               My Journey
             </h2>
             <div className="space-y-4 text-neutral-700 leading-relaxed text-lg">
               <p>
-                I'm <strong className="text-primary-700">Liang Telkamp</strong>, an AI Consultant at{' '}
-                <strong className="text-primary-700">NextHuman</strong>, where I specialize in developing 
-                cutting-edge Natural Language Processing and Machine Learning solutions.
+                I'm <strong className="text-primary-700">Liang Telkamp</strong>, currently a{' '}
+                <strong className="text-primary-700">Software Engineer Intern at UN OCHA</strong>, where I 
+                develop software solutions for humanitarian operations and global crisis response. Previously, 
+                I worked as an AI Consultant at <strong className="text-primary-700">NextHuman</strong>, 
+                specializing in Natural Language Processing and Machine Learning solutions.
               </p>
               <p>
                 My journey in AI began at the University of Amsterdam, where I completed dual master's degrees 
                 in <strong className="text-primary-700">Artificial Intelligence</strong> and{' '}
-                <strong className="text-primary-700">Logic</strong>. This unique combination gives me a 
-                distinctive perspective on machine learning—blending practical application with rigorous 
+                <strong className="text-primary-700">Logic</strong>. I have a deep interest in{' '}
+                <strong className="text-primary-700">Logic and AI</strong>, exploring how formal reasoning 
+                can enhance machine learning systems. This unique combination gives me a 
+                distinctive perspective on AI—blending practical application with rigorous 
                 theoretical foundations.
+              </p>
+              <p>
+                During my thesis internship at <strong className="text-primary-700">Centrum Wiskunde & 
+                Informatica (CWI)</strong>, I conducted research on Machine Translation and NLP, which was 
+                recognized with a <strong className="text-primary-700">thesis award</strong> for outstanding 
+                research contribution.
               </p>
               <p>
                 Today, I focus on creating <strong className="text-primary-700">sustainable AI solutions</strong> that 
@@ -75,7 +85,7 @@ export default function About() {
       <section className="py-20 bg-gradient-to-b from-white to-primary-50/30">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-transparent">
+            <span className="bg-gradient-organic bg-clip-text text-green-600">
               Education
             </span>
           </h2>
@@ -139,7 +149,7 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-transparent">
+            <span className="bg-gradient-organic bg-clip-text text-green-600">
               Research & Interests
             </span>
           </h2>
@@ -191,7 +201,7 @@ export default function About() {
       <section className="py-20 bg-gradient-to-b from-white to-primary-50/30">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-transparent">
+            <span className="bg-gradient-organic bg-clip-text text-green-600">
               Technical Skills
             </span>
           </h2>
@@ -212,7 +222,7 @@ export default function About() {
               },
               {
                 category: 'Tools & Platforms',
-                skills: ['Git', 'Docker', 'Linux', 'AWS', 'Jupyter']
+                skills: ['Git', 'Docker', 'Linux', 'Azure', 'Jupyter']
               },
               {
                 category: 'Languages',
@@ -220,7 +230,7 @@ export default function About() {
               },
               {
                 category: 'Specializations',
-                skills: ['NLP', 'Machine Learning', 'Deep Learning', 'Logic', 'Research']
+                skills: ['NLP', 'LLMs', 'Machine Learning', 'Deep Learning', 'Logic', 'Research']
               }
             ].map((skillSet, index) => (
               <div 

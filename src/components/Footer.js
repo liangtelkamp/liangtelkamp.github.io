@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-outfit font-bold text-lg mb-4 bg-gradient-organic bg-clip-text text-transparent">
+            <h3 className="font-outfit font-bold text-lg mb-4 bg-gradient-organic bg-clip-text text-green-600">
               Liang Telkamp
             </h3>
             <p className="text-neutral-600 text-sm leading-relaxed">
@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="flex gap-4">
               <a 
                 href="mailto:telkampliang@gmail.com" 
-                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md"
+                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-green-600 hover:scale-110 transition-transform shadow-md"
                 title="Email"
               >
                 ✉️
@@ -53,7 +53,7 @@ export default function Footer() {
                 href="https://github.com/liangtelkamp" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md"
+                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-green-600 hover:scale-110 transition-transform shadow-md"
                 title="GitHub"
               >
                 💻
@@ -62,7 +62,7 @@ export default function Footer() {
                 href="https://linkedin.com/in/liangtelkamp" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-white hover:scale-110 transition-transform shadow-md"
+                className="w-12 h-12 rounded-full bg-gradient-organic flex items-center justify-center text-green-600 hover:scale-110 transition-transform shadow-md"
                 title="LinkedIn"
               >
                 💼

@@ -26,7 +26,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <Link href="/" className="group">
-            <h1 className="text-2xl font-bold font-outfit bg-gradient-organic bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold font-outfit bg-gradient-organic bg-clip-text text-green-600">
               Liang Telkamp
             </h1>
             <p className="text-sm text-neutral-600">AI Consultant</p>

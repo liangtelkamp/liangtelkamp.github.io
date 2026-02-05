@@ -39,12 +39,12 @@ export default function Home() {
           <div className="space-y-6 animate-fade-in">
             <h1 className="font-outfit font-bold text-5xl md:text-6xl lg:text-7xl leading-tight">
               Building the Future with{' '}
-              <span className="bg-gradient-organic bg-clip-text text-transparent">
+              <span className="bg-gradient-organic bg-clip-text text-green-600">
                 AI
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-700 font-medium">
-              AI Consultant at NextHuman
+              AI Consultant at NextHuman | Software Engineer Intern at UN OCHA
             </p>
             <p className="text-lg text-neutral-600 leading-relaxed max-w-xl">
               Specializing in Natural Language Processing and Machine Learning solutions 
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex gap-4 pt-4">
               <a 
                 href="/about" 
-                className="px-8 py-4 bg-gradient-organic text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-organic text-green-600 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 Learn More
                 <span>→</span>
@@ -74,22 +74,13 @@ export default function Home() {
               {/* Rotating gradient border */}
               <div className="absolute inset-0 bg-gradient-organic rounded-full blur-xl opacity-50 green-glow"></div>
               <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-primary-100 shadow-2xl bg-gradient-soft ring-4 ring-primary-200/50">
-                {/* Placeholder - replace with actual image */}
-                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary-100 to-accent-100">
-                  <div className="text-center">
-                    <div className="text-8xl mb-4">👤</div>
-                    <p className="text-neutral-600 font-medium">Your Photo Here</p>
-                  </div>
-                </div>
-                {/* Uncomment when you add your image:
                 <Image 
-                  src="/images/profile.jpg" 
+                  src="/images/profile_photo.jpeg" 
                   alt="Liang Telkamp" 
                   fill
                   className="object-cover"
                   priority
                 />
-                */}
               </div>
             </div>
           </div>
@@ -100,7 +91,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-b from-white to-primary-50/30">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-outfit font-bold text-4xl md:text-5xl text-center mb-4 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-transparent">
+            <span className="bg-gradient-organic bg-clip-text text-green-600">
               Expertise
             </span>
           </h2>
@@ -169,7 +160,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-outfit font-bold text-4xl md:text-5xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-transparent">
+            <span className="bg-gradient-organic bg-clip-text text-green-600">
               Professional Journey
             </span>
           </h2>
@@ -181,11 +172,32 @@ export default function Home() {
             <div className="space-y-12">
               {[
                 {
+                  company: 'UN OCHA',
+                  role: 'Software Engineer Intern',
+                  period: 'September 2025 - Present',
+                  description: 'Supported the HDX dev/design team in building an automated pipeline for detecting personal and sensitive data in humanitarian datasets. Evaluated and compared Large Language Models (LLMs), contributed to infrastructure design, and helped develop code for dataset scanning and model adaptation. Worked closely with data engineers and humanitarian data specialists to ensure the solution was scalable, cost-efficient, and aligned with data responsibility principles.',
+                  current: true
+                },
+                {
                   company: 'NextHuman',
                   role: 'AI Consultant',
-                  period: 'August 2024 - Present',
-                  description: 'Leading AI consulting projects, implementing cutting-edge machine learning solutions, and driving innovation in sustainable AI practices.',
+                  period: 'August 2025 - Present',
+                  description: 'Led AI consulting projects, implementing cutting-edge machine learning solutions, and driving innovation in sustainable AI practices.',
                   current: true
+                },
+                {
+                  company: 'Centrum Wiskunde & Informatica (CWI)',
+                  role: 'Thesis Intern',
+                  period: 'January 2025 - August 2025',
+                  description: 'For my master thesis AI, I developed an LLM-powered framework for contextually sensitive data detection in tabular datasets, enhancing data governance and privacy protection beyond traditional PII identification at Centrum Wiskunde & Informatica under supervision of Dr. Madelon Hulsebos at the department for Database Architectures.',
+                  award: true,
+                  thesisLink: 'https://scripties.uba.uva.nl/search?id=record_56810'
+                },
+                {
+                  company: 'University of Amsterdam',
+                  role: 'Administrative Secretary',
+                  period: 'September 2023 - September 2024',
+                  description: 'Managed administrative operations while completing advanced studies in AI and Logic.',
                 },
                 {
                   company: 'University of Amsterdam',
@@ -194,10 +206,16 @@ export default function Home() {
                   description: 'Mentored students in AI and computer science courses, developing strong communication and leadership skills while advancing research in NLP.',
                 },
                 {
-                  company: 'University of Amsterdam',
-                  role: 'Administrative Secretary',
-                  period: 'September 2023 - September 2024',
-                  description: 'Managed administrative operations while completing advanced studies in AI and Logic.',
+                  company: 'Faculty Student Council FNWI',
+                  role: 'Vice-Chair',
+                  period: 'September 2022 - August 2023',
+                  description: 'Represented student voices at the faculty level. Improved the study climate by organizing events and engaging in strategic dialogues with faculty staff and the board.',
+                },
+                {
+                  company: 'Faculty Student Council FNWI',
+                  role: 'Council Assistant',
+                  period: 'December 2021 - August 2022',
+                  description: 'Served as a council assistant working on key issues including facilities, diversity, and educational regulations (TERs).',
                 },
                 {
                   company: 'StudentsPlus',
@@ -215,19 +233,37 @@ export default function Home() {
                   <div className="absolute left-6 top-2 w-5 h-5 rounded-full bg-gradient-organic border-4 border-white shadow-lg"></div>
                   
                   <div className="bg-white rounded-xl p-6 border border-neutral-200 hover:border-primary-300 hover:shadow-lg hover:shadow-primary-100/30 transition-all duration-300 green-border-accent">
-                    <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
                       <h3 className="font-outfit font-bold text-xl text-neutral-800">
                         {job.company}
                       </h3>
-                      {job.current && (
-                        <span className="px-3 py-1 bg-gradient-organic text-white text-xs rounded-full font-semibold">
-                          Current
-                        </span>
-                      )}
+                      <div className="flex gap-2">
+                        {job.current && (
+                          <span className="px-3 py-1 bg-gradient-organic text-green-600 text-xs rounded-full font-semibold">
+                            Current
+                          </span>
+                        )}
+                        {job.award && (
+                          <span className="px-3 py-1 bg-gradient-to-r from-yellow-100 to-amber-100 text-amber-700 text-xs rounded-full font-semibold border border-amber-300">
+                            🏆 Thesis Award
+                          </span>
+                        )}
+                      </div>
                     </div>
                     <p className="font-semibold text-primary-700 mb-1">{job.role}</p>
                     <p className="text-sm text-neutral-500 mb-3">{job.period}</p>
                     <p className="text-neutral-600 leading-relaxed">{job.description}</p>
+                    {job.thesisLink && (
+                      <a 
+                        href={job.thesisLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-3 text-primary-600 hover:text-primary-700 font-medium text-sm hover:underline transition-colors"
+                      >
+                        📄 View Thesis
+                        <span className="text-xs">↗</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -241,14 +277,14 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-outfit font-bold text-4xl md:text-5xl mb-6 animate-on-scroll">
             Let's Build Something{' '}
-            <span className="bg-gradient-organic bg-clip-text text-transparent">Amazing</span>
+            <span className="bg-gradient-organic bg-clip-text text-green-600">Amazing</span>
           </h2>
           <p className="text-xl text-neutral-700 mb-8 animate-on-scroll">
             Ready to transform your ideas into intelligent, sustainable solutions?
           </p>
           <a 
             href="/contact" 
-            className="inline-block px-10 py-5 bg-gradient-organic text-white rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-primary-300/50 hover:scale-105 transition-all duration-300 animate-on-scroll green-glow"
+            className="inline-block px-10 py-5 bg-gradient-organic text-green-600 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-primary-300/50 hover:scale-105 transition-all duration-300 animate-on-scroll green-glow"
           >
             Start a Conversation →
           </a>

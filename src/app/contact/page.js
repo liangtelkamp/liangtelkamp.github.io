@@ -30,7 +30,7 @@ export default function Contact() {
         
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h1 className="font-outfit font-bold text-5xl md:text-6xl mb-6 animate-fade-in">
-            Let's <span className="bg-gradient-organic bg-clip-text text-transparent">Connect</span>
+            Let's <span className="bg-gradient-organic bg-clip-text text-green-600">Connect</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-700 font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Open to Collaborations & Opportunities
@@ -49,7 +49,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div className="space-y-6">
               <h2 className="font-outfit font-bold text-3xl mb-8 animate-on-scroll">
-                <span className="bg-gradient-organic bg-clip-text text-transparent">
+                <span className="bg-gradient-organic bg-clip-text text-green-600">
                   Get in Touch
                 </span>
               </h2>
@@ -113,7 +113,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="animate-on-scroll">
               <h2 className="font-outfit font-bold text-3xl mb-8">
-                <span className="bg-gradient-organic bg-clip-text text-transparent">
+                <span className="bg-gradient-organic bg-clip-text text-green-600">
                   Send a Message
                 </span>
               </h2>
@@ -182,7 +182,7 @@ export default function Contact() {
 
                 <button 
                   type="submit"
-                  className="w-full px-8 py-4 bg-gradient-organic text-white rounded-lg font-semibold hover:shadow-xl hover:shadow-primary-300/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 green-glow"
+                  className="w-full px-8 py-4 bg-gradient-organic text-green-600 rounded-lg font-semibold hover:shadow-xl hover:shadow-primary-300/50 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 green-glow"
                 >
                   Send Message
                   <span>→</span>
@@ -204,14 +204,14 @@ export default function Contact() {
       <section className="py-20 bg-gradient-to-br from-primary-50 to-accent-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white rounded-2xl p-8 md:p-12 border border-neutral-200 shadow-lg text-center animate-on-scroll">
-            <h2 className="font-outfit font-bold text-3xl mb-6 bg-gradient-organic bg-clip-text text-transparent">
+            <h2 className="font-outfit font-bold text-3xl mb-6 bg-gradient-organic bg-clip-text text-green-600">
               Current Availability
             </h2>
             <p className="text-lg text-neutral-700 leading-relaxed mb-6 max-w-2xl mx-auto">
               I'm currently working as an AI Consultant at NextHuman, developing innovative AI solutions. 
               I'm open to discussing research collaborations, consulting opportunities, and interesting AI projects.
             </p>
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-organic text-white rounded-full font-semibold shadow-md">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-organic text-green-600 rounded-full font-semibold shadow-md">
               <span className="w-3 h-3 bg-white rounded-full animate-pulse"></span>
               Available for Opportunities
             </div>
