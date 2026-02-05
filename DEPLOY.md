@@ -84,6 +84,24 @@ Then:
 
 ## Troubleshooting
 
+### Site still shows README instead of Next.js app
+1. **Check GitHub Actions ran successfully:**
+   - Go to the **Actions** tab in your repository
+   - Look for "Deploy Next.js Portfolio to GitHub Pages"
+   - Make sure it shows a green checkmark ✓
+   - If it failed (red X), click on it to see the error
+
+2. **Verify GitHub Pages source is set to "GitHub Actions":**
+   - Go to Settings → Pages
+   - Source should be "GitHub Actions" (not "Deploy from a branch")
+
+3. **Clear browser cache:**
+   - Hard refresh: `Cmd + Shift + R` (Mac) or `Ctrl + Shift + R` (Windows)
+   - Or try in an incognito/private window
+
+4. **Wait a few minutes:**
+   - GitHub Pages can take 2-5 minutes to update after deployment
+
 ### Build fails
 - Make sure all dependencies are installed: `npm install`
 - Check for TypeScript/JavaScript errors: `npm run build`
