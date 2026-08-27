@@ -1,70 +1,52 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+  ]
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/80 backdrop-blur-lg shadow-md border-b border-neutral-200' 
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="group">
-            <h1 className="text-2xl font-bold font-outfit bg-gradient-organic bg-clip-text text-green-600">
-              Liang Telkamp
-            </h1>
-            <p className="text-sm text-neutral-600">AI Consultant</p>
-          </Link>
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <Link href="/" className="flex flex-col">
+          <span className="text-xl font-semibold text-slate-900 tracking-tight">
+            Liang Telkamp
+          </span>
+          <span className="text-xs text-slate-500 font-medium">
+            AI & Software Engineer
+          </span>
+        </Link>
 
-          <nav>
-            <ul className="flex gap-8">
-              <li>
-                <Link 
-                  href="/" 
-                  className="text-neutral-700 hover:text-primary-600 font-medium transition-colors relative group"
-                >
-                  Home
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-organic group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/about" 
-                  className="text-neutral-700 hover:text-primary-600 font-medium transition-colors relative group"
-                >
-                  About
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-organic group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/contact" 
-                  className="text-neutral-700 hover:text-primary-600 font-medium transition-colors relative group"
-                >
-                  Contact
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-organic group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav>
+          <ul className="flex items-center gap-6 text-sm font-medium">
+            {navItems.map((item) => {
+              const isActive = pathname === item.path
+              return (
+                <li key={item.path}>
+                  <Link
+                    href={item.path}
+                    className={`transition-colors py-1 ${
+                      isActive
+                        ? 'text-slate-900 font-semibold border-b-2 border-slate-900'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
       </div>
     </header>
   )
 }
+

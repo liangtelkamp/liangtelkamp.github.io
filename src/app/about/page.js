@@ -1,260 +1,270 @@
-'use client'
-
-import { useEffect } from 'react'
-
 export default function About() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
+  const experiences = [
+    {
+      company: 'NextHuman',
+      role: 'AI Consultant',
+      period: 'August 2025 – Present',
+      description: 'Leading AI consulting engagements, implementing machine learning solutions, and advising on AI integration and sustainable technology practices.',
+      current: true
+    },
+    {
+      company: 'UN OCHA',
+      role: 'Software Engineer Intern',
+      period: 'September 2025 – September 2026',
+      description: 'Supporting the HDX dev/design team in building an automated pipeline for detecting personal and sensitive data in humanitarian datasets. Evaluating Large Language Models (LLMs), contributing to infrastructure design, and developing dataset scanning tools.'
+    },
+    {
+      company: 'Centrum Wiskunde & Informatica (CWI)',
+      role: 'Thesis Intern',
+      period: 'January 2025 – August 2025',
+      description: 'Developed an LLM-powered framework for contextually sensitive data detection in tabular datasets for MSc thesis in AI, supervised by Dr. Madelon Hulsebos at the Database Architectures department.',
+      award: '🏆 Thesis Award',
+      thesisLink: 'https://scripties.uba.uva.nl/search?id=record_56810'
+    },
+    {
+      company: 'University of Amsterdam',
+      role: 'Administrative Secretary',
+      period: 'September 2023 – September 2024',
+      description: 'Managed administrative operations for academic programs while completing advanced studies in AI and Logic.'
+    },
+    {
+      company: 'University of Amsterdam',
+      role: 'Teaching Assistant',
+      period: 'August 2022 – December 2024',
+      description: 'Mentored students in artificial intelligence and computer science courses, leading lab sessions and grading coursework.'
+    },
+    {
+      company: 'Faculty Student Council FNWI',
+      role: 'Vice-Chair & Council Assistant',
+      period: 'December 2021 – August 2023',
+      description: 'Represented student body interests at the faculty level, improving study climate and engaging in strategic dialogues with faculty leadership.'
+    }
+  ]
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el)
-    })
+  const education = [
+    {
+      institution: 'University of Amsterdam',
+      degree: 'MSc Artificial Intelligence',
+      period: '2023 – 2025',
+      description: 'Master\'s degree specialized in Natural Language Processing, Formal Logic, and sensitive data detection. Conducted master thesis research at CWI.',
+      highlights: ['Machine Learning', 'NLP', 'Formal Logic', 'Tabular PII Detection']
+    },
+    {
+      institution: 'University of Amsterdam',
+      degree: 'BSc Artificial Intelligence',
+      period: '2020 – 2023',
+      description: 'Foundational degree in AI with focus on computer science, algorithms, and logic & computability theory.',
+      highlights: ['AI Fundamentals', 'Algorithms', 'Computability Theory', 'Data Structures']
+    },
+    {
+      institution: 'Cygnus Gymnasium',
+      degree: 'Pre-University Education (VWO)',
+      period: '2013 – 2019',
+      description: 'Secondary education with profiles in Nature & Technology and Nature & Health.',
+      highlights: ['Mathematics', 'Physics', 'Biology', 'Chemistry']
+    }
+  ]
 
-    return () => observer.disconnect()
-  }, [])
+  const publications = [
+    {
+      year: '2026',
+      title: 'Towards Contextual Sensitive Data Detection',
+      authors: 'Liang Telkamp and Madelon Hulsebos',
+      venue: 'In Findings of the Association for Computational Linguistics: EMNLP 2026',
+      pdfLink: 'https://arxiv.org/pdf/2512.04120',
+      codeLink: 'https://github.com/trl-lab/sensitive-data-detection',
+      abstract: 'The emergence of open data portals necessitates more attention to protecting sensitive data before datasets get published and exchanged. To do so effectively, we observe the need to refine and broaden our definitions of sensitive data, and argue that the sensitivity of data depends on its context. Following this definition, we introduce a contextual data sensitivity framework building on two core concepts: 1) type contextualization, which considers the type of the data values at hand within the overall context of the dataset or document to assess their true sensitivity, and 2) domain contextualization, which assesses the sensitivity of data values informed by domain-specific information external to the dataset, such as geographic origin of a dataset. Experiments instrumented with language models confirm that: 1) type-contextualization significantly reduces the number of false positives for type-based sensitive data detection and reaches a recall of 94% compared to 63% with commercial tools, and 2) domain-contextualization leveraging sensitivity rule retrieval effectively grounds sensitive data detection in relevant context in non-standard data domains. A case study with humanitarian data experts also illustrates that contextgrounded explanations provide useful guidance in manual data auditing processes. We open-source the implementation of the mechanisms and annotated datasets at: https://github.com/trl-lab/sensitive-data-detection.'
+    }
+  ]
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary-50 via-white to-accent-50"></div>
-        
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="font-outfit font-bold text-5xl md:text-6xl mb-6 animate-fade-in">
-            About <span className="bg-gradient-organic bg-clip-text text-green-600">Me</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-primary-700 font-medium mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            AI Consultant @ NextHuman | Software Engineer Intern @ UN OCHA
+    <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+      {/* Header */}
+      <section className=" pb-8">
+        <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+          About Liang Telkamp
+        </h1>
+        <p className="text-slate-600 text-lg leading-relaxed max-w-3xl">
+          Software Engineer Intern at UN OCHA & AI Consultant at NextHuman. 
+          Master of Science in Artificial Intelligence from the University of Amsterdam.
+        </p>
+      </section>
+
+      {/* Bio / Journey */}
+      <section>
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight border-b border-slate-200 pb-3">
+          Background & Focus
+        </h2>
+        <div className="prose prose-slate max-w-none text-slate-700 space-y-4 leading-relaxed">
+          <p>
+            I am a software engineer and AI researcher with a background in <strong>Natural Language Processing</strong>, 
+            <strong> Machine Learning</strong>, and <strong>Logic</strong>. 
+            Currently, at <strong>UN OCHA</strong>, I assist the HDX dev/design team in engineering an automated pipeline 
+            for scanning sensitive and personal data across humanitarian datasets.
           </p>
-          <p className="text-lg text-neutral-600 leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            Passionate about leveraging AI to create sustainable, impactful solutions for tomorrow's challenges
+          <p>
+            At <strong>NextHuman</strong>, I consult on AI solutions, evaluating machine learning models and implementing scalable technologies for clients. 
+            My research background includes a Master’s thesis completed at <strong>Centrum Wiskunde & Informatica (CWI)</strong> under supervision of 
+            Dr. Madelon Hulsebos, focused on LLM-driven contextual sensitive data detection in tabular data, which received a 
+            <strong> Thesis Award</strong>.
           </p>
         </div>
       </section>
 
-      {/* My Story */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white rounded-2xl p-8 md:p-12 border border-neutral-200 shadow-lg green-border-accent hover:shadow-xl hover:shadow-primary-100/30 transition-all duration-300 animate-on-scroll">
-            <h2 className="font-outfit font-bold text-3xl mb-6 bg-gradient-organic bg-clip-text text-green-600">
-              My Journey
-            </h2>
-            <div className="space-y-4 text-neutral-700 leading-relaxed text-lg">
-              <p>
-                I'm <strong className="text-primary-700">Liang Telkamp</strong>, currently a{' '}
-                <strong className="text-primary-700">Software Engineer Intern at UN OCHA</strong>, where I 
-                develop software solutions for humanitarian operations and global crisis response. Previously, 
-                I worked as an AI Consultant at <strong className="text-primary-700">NextHuman</strong>, 
-                specializing in Natural Language Processing and Machine Learning solutions.
-              </p>
-              <p>
-                My journey in AI began at the University of Amsterdam, where I completed master's degree 
-                in <strong className="text-primary-700">Artificial Intelligence</strong>. I have a deep interest in{' '}
-                <strong className="text-primary-700">Logic, NLP and AI</strong>, exploring how formal reasoning 
-                can enhance machine learning systems. This unique combination gives me a 
-                distinctive perspective on AI—blending practical application with rigorous 
-                theoretical foundations.
-              </p>
-              <p>
-                During my thesis internship at <strong className="text-primary-700">Centrum Wiskunde & 
-                Informatica (CWI)</strong>, I conducted research on Machine Translation and NLP, which was 
-                recognized with a <strong className="text-primary-700">thesis award</strong> for outstanding 
-                research contribution.
-              </p>
-              <p>
-                Today, I focus on creating <strong className="text-primary-700">sustainable AI solutions</strong> that 
-                not only solve complex problems but also contribute to a more eco-conscious future. I believe 
-                technology should serve humanity and our planet, driving innovation that matters.
-              </p>
+      {/* Publications */}
+      <section className="space-y-6">
+        <div className="border-b border-slate-200 pb-3">
+          <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+            Publications
+          </h2>
+        </div>
+
+        <div className="space-y-6">
+          {publications.map((pub, index) => (
+            <div
+              key={index}
+              className="bg-white border border-slate-200 rounded-lg p-6 space-y-3 shadow-xs"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {pub.title}
+                  </h3>
+                  <p className="text-sm text-slate-700 font-medium">
+                    {pub.authors}
+                  </p>
+                  <p className="text-xs text-slate-500 italic">
+                    {pub.venue} ({pub.year})
+                  </p>
+                </div>
+                <div className="flex items-center gap-3 flex-wrap text-xs font-medium">
+                  {pub.pdfLink && (
+                    <a
+                      href={pub.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded hover:bg-emerald-100 transition-colors"
+                    >
+                      PDF ↗
+                    </a>
+                  )}
+                  {pub.codeLink && (
+                    <a
+                      href={pub.codeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 bg-slate-100 text-slate-700 border border-slate-200 rounded hover:bg-slate-200 transition-colors"
+                    >
+                      Code ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              {pub.abstract && (
+                <details className="mt-3 text-xs text-slate-600 border-t border-slate-100 pt-3 group">
+                  <summary className="cursor-pointer font-medium text-slate-700 hover:text-slate-900 select-none">
+                    Abstract
+                  </summary>
+                  <p className="mt-2 leading-relaxed bg-slate-50 p-4 rounded border border-slate-200">
+                    {pub.abstract}
+                  </p>
+                </details>
+              )}
             </div>
-          </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Work & Research Experience */}
+      <section className="space-y-6">
+        <div className="border-b border-slate-200 pb-3">
+          <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+            Work & Research Experience
+          </h2>
+          <p className="text-slate-500 text-sm mt-1">
+            Chronological overview of career and research appointments
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-white border border-slate-200 rounded-lg p-6 border-accent-left shadow-xs"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {exp.company}
+                  </h3>
+                  <span className="text-slate-400 font-normal">|</span>
+                  <span className="text-slate-700 font-medium text-sm">
+                    {exp.role}
+                  </span>
+                  {exp.current && (
+                    <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-semibold rounded">
+                      Current
+                    </span>
+                  )}
+                  {exp.award && (
+                    <span className="px-2 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 text-xs font-semibold rounded">
+                      {exp.award}
+                    </span>
+                  )}
+                </div>
+                <span className="text-xs text-slate-500 font-mono">
+                  {exp.period}
+                </span>
+              </div>
+              <p className="text-slate-600 text-sm leading-relaxed mt-2">
+                {exp.description}
+              </p>
+              {exp.thesisLink && (
+                <div className="mt-3">
+                  <a
+                    href={exp.thesisLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-xs font-medium text-emerald-700 hover:underline gap-1"
+                  >
+                    View Master Thesis Record ↗
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
       {/* Education */}
-      <section className="py-20 bg-gradient-to-b from-white to-primary-50/30">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-green-600">
-              Education
-            </span>
-          </h2>
-
-          <div className="space-y-8">
-            {[
-              {
-                institution: 'University of Amsterdam',
-                degree: 'MSc Artificial Intelligence',
-                period: '2023 - 2025',
-                description: 'Master\'s degree with specialization in Logic, Natural Language Processing and Sensitive Data. Engaged in cutting-edge research while maintaining academic excellence.',
-                highlights: ['Machine Learning', 'NLP', 'Formal Logic', 'Research Methods']
-              },
-              {
-                institution: 'University of Amsterdam',
-                degree: 'BSc Artificial Intelligence',
-                period: '2020 - 2023',
-                description: 'Comprehensive foundation in AI with a minor in Logic & Computability. Developed strong programming skills and theoretical understanding.',
-                highlights: ['AI Fundamentals', 'Algorithms', 'Computability Theory', 'Data Structures']
-              },
-              {
-                institution: 'Cygnus Gymnasium',
-                degree: 'Pre-University Education',
-                period: '2013 - 2019',
-                description: 'Advanced secondary education with focus on Nature & Technology and Nature & Health.',
-                highlights: ['Mathematics', 'Physics', 'Biology', 'Chemistry']
-              }
-            ].map((edu, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl p-8 border-l-4 border-l-primary-400 border-t border-r border-b border-neutral-200 hover:border-primary-300 hover:shadow-xl hover:shadow-primary-100/50 transition-all duration-300 animate-on-scroll"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                  <div>
-                    <h3 className="font-outfit font-bold text-2xl text-neutral-800 mb-1">
-                      {edu.institution}
-                    </h3>
-                    <p className="text-primary-700 font-semibold text-lg">{edu.degree}</p>
-                  </div>
-                  <span className="text-neutral-500 font-medium mt-2 md:mt-0">{edu.period}</span>
+      <section className="space-y-6">
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight border-b border-slate-200 pb-3">
+          Academic Education
+        </h2>
+        <div className="space-y-6">
+          {education.map((item, index) => (
+            <div key={index} className="bg-white border border-slate-200 rounded-lg p-6 space-y-3 shadow-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900">{item.institution}</h3>
+                  <p className="text-emerald-800 font-medium text-sm">{item.degree}</p>
                 </div>
-                <p className="text-neutral-600 mb-4 leading-relaxed">{edu.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {edu.highlights.map((highlight, i) => (
-                    <span 
-                      key={i}
-                      className="px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium border border-primary-200"
-                    >
-                      {highlight}
-                    </span>
-                  ))}
-                </div>
+                <span className="text-xs text-slate-500 font-mono">{item.period}</span>
               </div>
-            ))}
-          </div>
+              <p className="text-slate-600 text-sm leading-relaxed">{item.description}</p>
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {item.highlights.map((h, i) => (
+                  <span key={i} className="px-2.5 py-0.5 bg-slate-100 text-slate-700 text-xs font-medium rounded">
+                    {h}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
-
-      {/* Research Interests */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-green-600">
-              Research & Interests
-            </span>
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                icon: '🌐',
-                title: 'Natural Language Processing',
-                description: 'Exploring advanced techniques in language understanding, generation, and translation to bridge linguistic and cultural gaps.'
-              },
-              {
-                icon: '🔄',
-                title: 'Machine Translation',
-                description: 'Researching innovative approaches to automated translation systems with emphasis on accuracy and contextual understanding.'
-              },
-              {
-                icon: '🧮',
-                title: 'Logic in AI',
-                description: 'Investigating the intersection of formal logic and AI, applying logical reasoning to enhance machine learning systems.'
-              },
-              {
-                icon: '🌱',
-                title: 'Sustainable AI',
-                description: 'Developing eco-conscious AI solutions that minimize environmental impact while maximizing societal benefit.'
-              }
-            ].map((interest, index) => (
-              <div 
-                key={index}
-                className="group bg-white rounded-xl p-8 border border-neutral-200 hover:border-primary-300 hover:shadow-xl transition-all duration-300 animate-on-scroll"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {interest.icon}
-                </div>
-                <h3 className="font-outfit font-bold text-xl mb-3 text-neutral-800">
-                  {interest.title}
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  {interest.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="py-20 bg-gradient-to-b from-white to-primary-50/30">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-outfit font-bold text-4xl text-center mb-16 animate-on-scroll">
-            <span className="bg-gradient-organic bg-clip-text text-green-600">
-              Technical Skills
-            </span>
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                category: 'Programming Languages',
-                skills: ['Python', 'JavaScript', 'C++', 'R', 'SQL']
-              },
-              {
-                category: 'AI/ML Frameworks',
-                skills: ['PyTorch', 'TensorFlow', 'scikit-learn', 'Hugging Face', 'LangChain']
-              },
-              {
-                category: 'Web Technologies',
-                skills: ['React', 'Next.js', 'Node.js', 'Tailwind CSS', 'FastAPI']
-              },
-              {
-                category: 'Tools & Platforms',
-                skills: ['Git', 'Docker', 'Linux', 'Azure', 'Jupyter']
-              },
-              {
-                category: 'Languages',
-                skills: ['Dutch (Native)', 'English (Fluent)']
-              },
-              {
-                category: 'Specializations',
-                skills: ['NLP', 'LLMs', 'Machine Learning', 'Deep Learning', 'Logic', 'Research']
-              }
-            ].map((skillSet, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-xl p-6 border border-neutral-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 animate-on-scroll"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="font-outfit font-bold text-lg mb-4 text-neutral-800">
-                  {skillSet.category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {skillSet.skills.map((skill, i) => (
-                    <span 
-                      key={i}
-                      className="px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full text-sm border border-primary-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   )
 }
+
