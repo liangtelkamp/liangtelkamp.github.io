@@ -27,9 +27,6 @@ export default function Contact() {
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
           Contact
         </h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-2xl">
-          Get in touch for research collaborations, technical inquiries, or consulting opportunities.
-        </p>
       </section>
 
       <div className="max-w-2xl space-y-6">
