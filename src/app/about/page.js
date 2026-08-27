@@ -78,38 +78,40 @@ export default function About() {
   ]
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
-      {/* Header */}
-      <section className=" pb-8">
-        <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
-          About Liang Telkamp
-        </h1>
-        <p className="text-slate-600 text-lg leading-relaxed max-w-3xl">
-          Software Engineer Intern at UN OCHA & AI Consultant at NextHuman. 
-          Master of Science in Artificial Intelligence from the University of Amsterdam.
-        </p>
-      </section>
+    <div className="max-w-5xl mx-auto px-6 py-12 space-y-12">
+      <div className="space-y-6">
+        {/* Header */}
+        <section>
+          <h1 className="text-3xl font-bold text-slate-900 tracking-tight">
+            About Liang Telkamp
+          </h1>
+          <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mt-2">
+            Software Engineer Intern at UN OCHA & AI Consultant at NextHuman. 
+            Master of Science in Artificial Intelligence from the University of Amsterdam.
+          </p>
+        </section>
 
-      {/* Bio / Journey */}
-      <section>
-        <h2 className="text-2xl font-bold text-slate-900 tracking-tight border-b border-slate-200 pb-3">
-          Background & Focus
-        </h2>
-        <div className="prose prose-slate max-w-none text-slate-700 space-y-4 leading-relaxed">
-          <p>
-            I am a software engineer and AI researcher with a background in <strong>Natural Language Processing</strong>, 
-            <strong> Machine Learning</strong>, and <strong>Logic</strong>. 
-            Currently, at <strong>UN OCHA</strong>, I assist the HDX dev/design team in engineering an automated pipeline 
-            for scanning sensitive and personal data across humanitarian datasets.
-          </p>
-          <p>
-            At <strong>NextHuman</strong>, I consult on AI solutions, evaluating machine learning models and implementing scalable technologies for clients. 
-            My research background includes a Master’s thesis completed at <strong>Centrum Wiskunde & Informatica (CWI)</strong> under supervision of 
-            Dr. Madelon Hulsebos, focused on LLM-driven contextual sensitive data detection in tabular data, which received a 
-            <strong> Thesis Award</strong>.
-          </p>
-        </div>
-      </section>
+        {/* Bio / Journey */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-slate-900 tracking-tight border-b border-slate-200 pb-3">
+            Background & Focus
+          </h2>
+          <div className="prose prose-slate max-w-none text-slate-700 space-y-4 leading-relaxed">
+            <p>
+              I am an AI consultant and software engineer specializing in public sector software solutions, <strong>Natural Language Processing</strong>, 
+              <strong> Machine Learning</strong>, and <strong>Logic</strong>. 
+              Currently, at <strong>UN OCHA</strong>, I assist the HDX dev/design team in engineering an automated pipeline 
+              for scanning sensitive and personal data across humanitarian datasets.
+            </p>
+            <p>
+              At <strong>NextHuman</strong>, I consult on AI solutions, evaluating machine learning models and implementing scalable technologies for clients. 
+              My research background includes a Master’s thesis completed at <strong>Centrum Wiskunde & Informatica (CWI)</strong> under supervision of 
+              Dr. Madelon Hulsebos, focused on LLM-driven contextual sensitive data detection in tabular data, which received a 
+              <strong> Thesis Award</strong>.
+            </p>
+          </div>
+        </section>
+      </div>
 
       {/* Publications */}
       <section className="space-y-6">

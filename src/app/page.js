@@ -12,12 +12,11 @@ export default function Home() {
               Liang Telkamp
             </h1>
             <p className="text-lg font-medium text-emerald-800">
-              Software Engineer Intern @ UN OCHA | AI Consultant @ NextHuman
+              AI Consultant @ NextHuman | Software Engineer Intern @ UN OCHA
             </p>
           </div>
           <p className="text-slate-600 leading-relaxed max-w-2xl">
-            AI specialist focused on Natural Language Processing, Machine Learning, and sensitive data detection. 
-            MSc in Artificial Intelligence from the University of Amsterdam with research experience at Centrum Wiskunde & Informatica (CWI).
+            AI Consultant specializing in public sector software solutions, Natural Language Processing, Machine Learning, and sensitive data governance. MSc in Artificial Intelligence from the University of Amsterdam with research experience at Centrum Wiskunde & Informatica (CWI).
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Link
@@ -30,7 +29,7 @@ export default function Home() {
               href="/about"
               className="px-5 py-2.5 bg-white text-slate-700 border border-slate-300 rounded-md font-medium text-sm hover:bg-slate-50 transition-colors"
             >
-              View Full Profile
+              View CV
             </Link>
           </div>
         </div>
