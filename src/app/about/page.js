@@ -4,7 +4,7 @@ export default function About() {
       company: 'NextHuman',
       role: 'AI Consultant',
       period: 'August 2025 – Present',
-      description: 'Leading AI consulting engagements, implementing machine learning solutions, and advising on AI integration and sustainable technology practices.',
+      description: 'Developing reliable, explainable AI applications and machine learning implementations for public sector clients.',
       current: true
     },
     {
